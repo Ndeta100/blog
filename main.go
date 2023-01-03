@@ -19,9 +19,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	pwd := os.Getenv("PASSWORD")
+	//pwd := os.Getenv("PASSWORD")
 	// Never use _, := db.Open(), release resources with db.Close
-	models.Db, models.Err = sql.Open("mysql", "root:"+pwd+"@tcp(127.0.0.1:3306)/dbblog")
+	//models.Db, models.Err = sql.Open("mysql", "root:"+pwd+"@tcp(127.0.0.1:3306)/dbblog")
+	models.Db, models.Err = sql.Open("mysql", "root:oNyWi5KPuMJF5H6Twtya@containers-us-west-97.railway.app:5676/railway")
 	if err != nil {
 		panic(models.Err)
 	}
